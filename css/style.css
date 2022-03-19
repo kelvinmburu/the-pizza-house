@@ -17,7 +17,7 @@
 
 /* Navbar section */
 .navbar {
-    background-color: rgb(56, 56, 56);
+    /* background-color: rgb(56, 56, 56); */
     padding: 4px 8px;
 }
 
@@ -50,3 +50,30 @@ nav ul li a:hover {
     transition: all 0.5s ease;
   }
 
+/* Styling h1 and p tags */
+
+.row {
+    display: flex;
+    height: 65%;
+    align-items: center;
+}
+
+.col {
+    flex-basis: 50% !important;
+}
+
+h1 {
+    color: #fff;
+    font-size: 75px;
+    font-weight: bold;
+    padding-left: 46px;
+}
+
+p {
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 18px;
+    padding-left: 46px;
+    letter-spacing: 1px;
+}
