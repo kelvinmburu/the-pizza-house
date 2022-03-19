@@ -76,7 +76,9 @@ button {
     margin-top: 90px;
     margin-left: 66px;
     margin-bottom: 50px;
+    animation-name: animate;
 }
+
 
 .main-btn {
     background-color: crimson;
@@ -94,5 +96,17 @@ button {
 /* Card styling */
 
 .container {
-    margin-top: 20px;
+    margin-top: 6%;
+}
+
+.inner {
+    overflow: hidden;
+}
+
+.inner img {
+    transition: all 1.5s ease;
+}
+
+.inner:hover img {
+    transform: scale(1.5);
 }
