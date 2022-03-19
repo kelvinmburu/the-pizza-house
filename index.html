@@ -10,6 +10,9 @@
   <!-- Favicon link -->
   <link rel="shortcut icon" href="images/Favicon-pizza place.png" type="image/x-icon">
 
+  <!-- Font Awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -21,8 +24,8 @@
   <!-- landing page hero section -->
 
   <div class="container-fluid">
-    <div class="navbar">
-      <img src="images/Pizza_house-rbg.png" class="nav-image" alt="pizza house" srcset="">
+    <div class="navbar" id="navbar">
+      <img src="images/logo.png" class="nav-image" alt="pizza house" srcset="">
       <nav>
         <ul>
           <li><a href="">Home</a></li>
@@ -38,12 +41,43 @@
     <div class="row">
       <div class="col">
         <h1>The Pizza House</h1>
-        <p>Welcome to Kenya's very first pizza house. As a family business, we pride ourselves in cooking the best pizzas with our specialised family recipes passed down generations.</p>
-        <button type="button" class="btn btn-primary btn-lg">Explore Menu</button>
+        <p class="hero-text">Welcome to Kenya's very first pizza house. As a family business, we pride ourselves in
+          cooking the best
+          pizzas with our specialised family recipes passed down generations.</p>
       </div>
-
-      <div class="col">
-
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="card shadow" style="width: 20rem;">
+              <img src="images/card2.jpg" class="card-img-top" alt="pizza">
+              <div class="card-body text-center">
+                <h5 class="card-title">Live Cooking</h5>
+                <p class="card-text">Be part of our live cooking sessions where we share the
+                  process to preparing the best pizza.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow" style="width: 20rem;">
+              <img src="images/card3.jpg" class="card-img-top" alt="pizza">
+              <div class="card-body text-center">
+                <h5 class="card-title">Live Baking</h5>
+                <p class="card-text">Want to see how pizza flour was kneeded in the 90's? Visit our archives part of the restaurant.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow" style="width: 20rem;">
+              <img src="images/card1.jpg" class="card-img-top" alt="pizza">
+              <div class="card-body text-center">
+                <h5 class="card-title">Best Pizza</h5>
+                <p class="card-text">Visit our restaurant to enjoy our delicious collections of pizzas collected from all parts of the world.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="main-btn btn-primary btn-lg">Explore Menu <i class="fa fa-arrow-right"
+          aria-hidden="true"></i></button>
       </div>
     </div>
   </div>
@@ -52,6 +86,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
+  <script src="js/script.js"></script>
 
 </body>
 
