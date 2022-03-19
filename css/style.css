@@ -14,3 +14,8 @@
     background-position: center;
     background-size: cover;
 }
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
