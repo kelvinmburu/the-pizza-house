@@ -7,6 +7,10 @@
     font-family: 'Lato', sans-serif;
 }
 
+body {
+    background: #f7f7f7;
+}
+
 /* Navbar styling */
 
 .nav-image {
@@ -95,3 +99,72 @@ nav ul li a:hover {
     height: 100%;
     width: 100%;
 }
+
+.pizza-text {
+    color: #dc143c;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.inner{
+    overflow: hidden;
+}
+
+.inner img {
+    transition: all 1.5s ease;
+}
+
+.inner:hover img {
+    transform: scale(1.5);
+}
+
+.ribbon {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 110px;
+    height: 93px;
+    text-align: right;
+  }
+  .ribbon span {
+    font-size: 0.8rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    line-height: 32px;
+    transform: rotate(45deg);
+    width: 125px;
+    display: block;
+    background: #dc143c;
+    background: linear-gradient(#dc143c 0%, #dc143c 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 18px; 
+    right: -29px;
+  }
+  
+  .ribbon span::before {
+     content: '';
+     position: absolute; 
+     left: 0px; top: 100%;
+     z-index: -1;
+     border-left: 3px solid #dc143c;
+     border-right: 3px solid transparent;
+     border-bottom: 3px solid transparent;
+     border-top: 3px solid #dc143c;
+  }
+  .ribbon span::after {
+     content: '';
+     position: absolute; 
+     right: 0%; top: 100%;
+     z-index: -1;
+     border-right: 3px solid #dc143c;
+     border-left: 3px solid transparent;
+     border-bottom: 3px solid transparent;
+     border-top: 3px solid #dc143c;
+  }
