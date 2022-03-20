@@ -79,3 +79,19 @@ nav ul li a:hover {
     font-size: 1rem;
     font-weight: bold;
 }
+
+/* Pizza Collection Section */
+
+.page-header {
+    margin-top: 25px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+}
