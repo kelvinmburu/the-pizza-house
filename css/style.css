@@ -30,7 +30,7 @@
  nav {
     display: flex;
     text-align: center;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 } 
 
 nav ul li {
