@@ -168,3 +168,15 @@ nav ul li a:hover {
      border-bottom: 3px solid transparent;
      border-top: 3px solid #dc143c;
   }
+
+
+  /* FAQ Accordion Section */
+
+  .faq-header {
+    margin-top: 25px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 50px;
+    font-weight: 600;
+  }
