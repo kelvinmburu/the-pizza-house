@@ -180,3 +180,52 @@ nav ul li a:hover {
     font-size: 50px;
     font-weight: 600;
   }
+
+  .ribbon-toppings {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 110px;
+    height: 93px;
+    text-align: right;
+  }
+  .ribbon-toppings span {
+    font-size: 0.8rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    line-height: 32px;
+    transform: rotate(45deg);
+    width: 125px;
+    display: block;
+    background: #14c5dc;
+    background: linear-gradient(#14c5dc 0%, #14c5dc 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 18px; 
+    right: -29px;
+  }
+  
+  .ribbon-toppings span::before {
+     content: '';
+     position: absolute; 
+     left: 0px; top: 100%;
+     z-index: -1;
+     border-left: 3px solid #14c5dc;
+     border-right: 3px solid transparent;
+     border-bottom: 3px solid transparent;
+     border-top: 3px solid #14c5dc;
+  }
+  .ribbon-toppings span::after {
+     content: '';
+     position: absolute; 
+     right: 0%; top: 100%;
+     z-index: -1;
+     border-right: 3px solid #14c5dc;
+     border-left: 3px solid transparent;
+     border-bottom: 3px solid transparent;
+     border-top: 3px solid #14c5dc;
+  }
+
