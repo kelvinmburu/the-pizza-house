@@ -110,3 +110,7 @@ button {
 .inner:hover img {
     transform: scale(1.5);
 }
+
+.card-title {
+    font-weight: bold;
+}
