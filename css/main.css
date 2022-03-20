@@ -36,11 +36,11 @@ nav ul li a {
 nav ul li a:hover {
     color: crimson !important;
     transition: all 0.5s ease;
-  }
+}
 
-  /* Carousel section styling */
+/* Carousel section styling */
 
-  .carousel-item {
+.carousel-item {
     height: 100vh;
     min-height: 300px;
     background: no-repeat scroll center scroll;
@@ -56,10 +56,10 @@ nav ul li a:hover {
     left: 0;
     bottom: 0;
     right: 0;
-    background: #000;
+    /* background: #000; */
     opacity: 0.5;
 }
-  
+
 .carousel-caption {
     bottom: 180px;
     padding-left: 100px;
@@ -109,7 +109,7 @@ nav ul li a:hover {
     font-weight: 600;
 }
 
-.inner{
+.inner {
     overflow: hidden;
 }
 
@@ -130,8 +130,9 @@ nav ul li a:hover {
     width: 110px;
     height: 93px;
     text-align: right;
-  }
-  .ribbon span {
+}
+
+.ribbon span {
     font-size: 0.8rem;
     color: #fff;
     text-align: center;
@@ -144,44 +145,47 @@ nav ul li a:hover {
     background: linear-gradient(#dc143c 0%, #dc143c 100%);
     box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
     position: absolute;
-    top: 18px; 
+    top: 18px;
     right: -29px;
-  }
-  
-  .ribbon span::before {
-     content: '';
-     position: absolute; 
-     left: 0px; top: 100%;
-     z-index: -1;
-     border-left: 3px solid #dc143c;
-     border-right: 3px solid transparent;
-     border-bottom: 3px solid transparent;
-     border-top: 3px solid #dc143c;
-  }
-  .ribbon span::after {
-     content: '';
-     position: absolute; 
-     right: 0%; top: 100%;
-     z-index: -1;
-     border-right: 3px solid #dc143c;
-     border-left: 3px solid transparent;
-     border-bottom: 3px solid transparent;
-     border-top: 3px solid #dc143c;
-  }
+}
+
+.ribbon span::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid #dc143c;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #dc143c;
+}
+
+.ribbon span::after {
+    content: '';
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    z-index: -1;
+    border-right: 3px solid #dc143c;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #dc143c;
+}
 
 
-  /* FAQ Accordion Section */
+/* FAQ Accordion Section */
 
-  .faq-header {
+.faq-header {
     margin-top: 25px;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 50px;
     font-weight: 600;
-  }
+}
 
-  .ribbon-toppings {
+.ribbon-toppings {
     position: absolute;
     right: -5px;
     top: -5px;
@@ -190,8 +194,9 @@ nav ul li a:hover {
     width: 110px;
     height: 93px;
     text-align: right;
-  }
-  .ribbon-toppings span {
+}
+
+.ribbon-toppings span {
     font-size: 0.8rem;
     color: #fff;
     text-align: center;
@@ -204,28 +209,133 @@ nav ul li a:hover {
     background: linear-gradient(#14c5dc 0%, #14c5dc 100%);
     box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
     position: absolute;
-    top: 18px; 
+    top: 18px;
     right: -29px;
-  }
-  
-  .ribbon-toppings span::before {
-     content: '';
-     position: absolute; 
-     left: 0px; top: 100%;
-     z-index: -1;
-     border-left: 3px solid #14c5dc;
-     border-right: 3px solid transparent;
-     border-bottom: 3px solid transparent;
-     border-top: 3px solid #14c5dc;
-  }
-  .ribbon-toppings span::after {
-     content: '';
-     position: absolute; 
-     right: 0%; top: 100%;
-     z-index: -1;
-     border-right: 3px solid #14c5dc;
-     border-left: 3px solid transparent;
-     border-bottom: 3px solid transparent;
-     border-top: 3px solid #14c5dc;
-  }
+}
 
+.ribbon-toppings span::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid #14c5dc;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #14c5dc;
+}
+
+.ribbon-toppings span::after {
+    content: '';
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    z-index: -1;
+    border-right: 3px solid #14c5dc;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #14c5dc;
+}
+
+/* Testimonial Section */
+
+.slider-area {
+    background: #262626;
+    padding: 50px 0;
+    position: relative;
+    margin: 65px 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background: transparent;
+}
+
+#carousel-1,
+#carousel-2,
+#carousel-3,
+#carousel-4 {
+    height: 50vh !important;
+}
+
+.img-area {
+    width: 100px;
+    height: 100px !important;
+    margin: auto;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img-area img {
+    width: 100%;
+}
+
+#carousel-caption,
+#carousel-caption1,
+#carousel-caption2,
+#carousel-caption3 {
+    position: static;
+    padding-bottom: 15px;
+    padding-top: 0;
+}
+
+/* Carousel h3 styling */
+
+#carousel-caption h3 {
+    font-size: 25px;
+    margin-bottom: 16px;
+    margin-top: 25px;
+    color: yellow;
+}
+
+#carousel-caption1 h3 {
+    font-size: 25px;
+    margin-bottom: 16px;
+    margin-top: 25px;
+    color: yellow;
+}
+
+#carousel-caption2 h3 {
+    font-size: 25px;
+    margin-bottom: 16px;
+    margin-top: 25px;
+    color: yellow;
+}
+
+#carousel-caption3 h3 {
+    font-size: 25px;
+    margin-bottom: 16px;
+    margin-top: 25px;
+    color: yellow;
+}
+
+/* Carousel paragraphs styling */
+
+#carousel-caption p {
+    font-size: 18px;
+    margin: auto;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+#carousel-caption1 p {
+    font-size: 18px;
+    margin: auto;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+#carousel-caption2 p {
+    font-size: 18px;
+    margin: auto;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+#carousel-caption3 p {
+    font-size: 18px;
+    margin: auto;
+    width: 70%;
+    margin-bottom: 10px;
+}
