@@ -6,3 +6,30 @@
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
+
+/* Navbar styling */
+
+.nav-image {
+    width: 115px;
+    cursor: pointer;
+}
+
+.navbar {
+    padding: 4px 8px;
+    background-color: rgb(56, 56, 56);
+}
+
+nav ul li {
+    padding: 8px 20px;
+}
+
+nav ul li a {
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: crimson !important;
+    transition: all 0.5s ease;
+  }
