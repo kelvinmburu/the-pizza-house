@@ -33,4 +33,4 @@ This project uses a combination of the following languages:
 
 #### Live Link
 
-[Click here to view the live demo]()
+[Click here to view the live demo](https://kelvinmburu.github.io/the-pizza-house/)
