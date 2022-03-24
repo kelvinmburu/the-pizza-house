@@ -49,6 +49,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#order-section">Order</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Place Order</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -260,7 +263,7 @@
 
   <div class="container g-2" id="pizzaToppings">
     <h2 class="page-header">Our <span class="pizza-text">Pizza</span> Toppings</h2>
-    <div class="row justify-content-center">
+    <div class="row align-items-start">
       <div class="col-md-4 mb-3">
         <div class="card shadow" style="width: 18rem;">
           <div class="ribbon-toppings"><span>Ksh 50</span></div>
@@ -401,7 +404,7 @@
   <section class="order" id="order-section">
     <h2 class="page-header" id="order-now">Place <span class="pizza-text">Order</span></h2>
     <div class="container">
-      <form class="needs-validation" novalidate>
+      <form class="needs-validation" id="pizzaForm" novalidate>
         <div class="form-row">
           <div class="col-md-4 mb-3">
             <label for="validationCustom01">First name</label>
@@ -442,26 +445,11 @@
           </div>
           <div class="col-md-5 mb-3">
             <label for="p-type">Pizza Type</label>
-            <select class="custom-select d-block w-100" id="pizza-type" required="">
+            <select class="custom-select d-block w-100" id="pizzaSize" required="">
               <option value="">Choose...</option>
-              <option>Small Classic Beef 400/=</option>
-              <option>Small Classic Chicken 500/=</option>
-              <option>Small Classic Hawaiian 450/=</option>
-              <option>Small Classic Chicken-Mushroom 400/=</option>
-              <option>Small Classic Cheese 450/=</option>
-              <option>Small Classic Pepperoni 400/=</option>
-              <option>Medium Classic Beef 650/=</option>
-              <option>Medium Classic Chicken 650/=</option>
-              <option>Medium Classic Hawaiian 650/=</option>
-              <option>Medium Classic Chicken-Mushroom 650/=</option>
-              <option>Medium Classic Cheese 650/=</option>
-              <option>Medium Classic Pepperoni 650/=</option>
-              <option>Large Classic Beef 1400/=</option>
-              <option>Large Classic Chicken 1500/=</option>
-              <option>Large Classic Hawaiian 1450/=</option>
-              <option>Large Classic Chicken-Mushroom 1800/=</option>
-              <option>Large Classic Cheese 1650/=</option>
-              <option>Large Classic Pepperoni 1200/=</option>
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
             </select>
             <div class="invalid-feedback"> Please select a valid pizza type </div>
           </div>
@@ -469,14 +457,40 @@
             <label for="t-type">Topping Flavor</label>
             <select class="custom-select d-block w-100" id="toppingFlavor" required="">
               <option value="">Choose...</option>
-              <option>Cheese</option>
-              <option>Beef Fillet</option>
-              <option>Bell Pepper</option>
-              <option>Mushroom Fillings</option>
-              <option>Onion Fillings</option>
-              <option>Pepperoni</option>
+              <option>Cheese 50/=</option>
+              <option>Beef Fillet 70/=</option>
+              <option>Bell Pepper 80/=</option>
+              <option>Mushroom Fillings 50/=</option>
+              <option>Onion Fillings 65/=</option>
+              <option>Pepperoni 80/=</option>
             </select>
             <div class="invalid-feedback"> Please select a valid topping flavor </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom05">Pizza Quantity</label>
+            <input type="number" class="form-control" id="pizza-number" placeholder="0" required>
+            <div class="invalid-feedback">
+              Please enter a valid number.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="t-type">Type of Delivery</label>
+            <select class="custom-select d-block w-100" id="delivery" required="">
+              <option value="">Choose...</option>
+              <option>Home Delivery</option>
+              <option>Office Delivery</option>
+            </select>
+            <div class="invalid-feedback"> Please select a valid delivery option.</div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="t-type">Crust</label>
+            <select class="custom-select d-block w-100" id="crust" required="">
+              <option value="">Choose...</option>
+              <option>Crispy</option>
+              <option>Stuffed</option>
+              <option>Gluten-free</option>
+            </select>
+            <div class="invalid-feedback"> Please select a valid crust type.</div>
           </div>
         </div>
         <div class="form-group">
@@ -490,8 +504,36 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-primary" type="submit">SUBMIT</button>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" type=""
+          id="checkOut">ADD</button>
       </form>
+    </div>
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Please make an order
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
