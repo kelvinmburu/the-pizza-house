@@ -356,8 +356,7 @@ form {
 }
 
 form .logo-img {
-    width:145px !important;
-    margin: 0 auto;
+    width:145px;
     height: auto;
 }
 
@@ -384,6 +383,7 @@ tr {
 table th,
 td {
     padding-left: 4vw;
+    color: #fff;
 }
 
 
@@ -415,12 +415,8 @@ td {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 150px;
+    justify-content: space-evenly;
 }
-
-/* Modal styling */
-
-
 
 
 /* End of order form styling */
