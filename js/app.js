@@ -37,16 +37,61 @@ function topFunction() {
 
 // Get address and Number of pizzas validation
 
-function getAddress() {
-    // Address links are
+let pizzaOrder = [];
 
-    name = document.form.validationCustom01.value;
+function myPizzaOrder() {
+    this.pizzaSize = pizzaSize;
+    this.crust = crust;
+    this.toppingFlavor = toppingFlavor;
 
-    phonenumber = document.form.phoneNumber.value;
-
-    ptype = document.form.p - type.selectedIndex;
-    ptype = document.form.p - type.options[p - type].value;
-
-    toppingFlavor = document.form.toppingFlavor.selectedIndex;
-    toppingFlavor = document.form.toppingFlavor.options[toppingFlavor].value;
+    this.pizzaPrice = pizzaPrice;
 }
+
+priceToppingsSmall = {
+    "small": 400,
+    "crispy": 100,
+    "stuffed": 200,
+    "glutenfree": 300,
+    "chicken": 100,
+    "beef": 100,
+    "chevon": 100,
+    "peppers": 100,
+    "onions": 50,
+    "olives": 150,
+    "pineapples": 100,
+}
+
+priceToppingsLarge = {
+    "large": 800,
+    "crispy": 200,
+    "stuffed": 300,
+    "glutenfree": 400,
+    "chicken": 200,
+    "beef": 200,
+    "chevon": 200,
+    "peppers": 200,
+    "onions": 150,
+    "olives": 250,
+    "pineapples": 200,
+  }
+  priceToppingsMedium = {
+    "medium" :600,
+    "crispy": 150,
+    "stuffed": 250,
+    "glutenfree": 350,
+    "chicken": 150,
+    "beef": 150,
+    "chevon": 150,
+    "peppers": 150,
+    "onions": 100,
+    "olives": 200,
+    "pineapples": 150,
+  }
+
+
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
