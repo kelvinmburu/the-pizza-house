@@ -103,8 +103,51 @@
     </table>
     <div class="btn btn-success submit">SUBMIT</div>
 
+<!-- sample modal -->
+
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+    Launch demo modal
+  </button> -->
+
+<!-- New Modal -->
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalScrollableTitle">THE PIZZA HOUSE</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="javascript:window.location.reload()">
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="total_div">
+                <p class="total"></p>
+                <p>We charge delivery at Kshs 200. Please click yes or no to proceed.</p>
+                <button class="btn btn-success" id="checkOut_yes">YES</button>
+                <button class="btn btn-danger" id="checkOut_no">NO</button>
+            </div>
+
+            <div class="grand_div">
+                <div class="form-group">
+                    <label for="">Delivery Location</label>
+                    <input type="text" name="" id="locale" class="form-control" placeholder=""
+                        aria-describedby="helpId" />
+                    <button class="btn btn-success" id="final_btn">SUBMIT</button>
+                </div>
+            </div>
+            <div class="final">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">YES</button>
+          <button type="button" class="btn btn-primary">NO</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <!-- Modal -->
-    <div class="modal fade" id="checkOut" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <!-- <div class="modal fade" id="checkOut" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -116,7 +159,7 @@
                 <div class="modal-body">
                     <div class="total_div">
                         <p class="total"></p>
-                        <p>We charge delivery at Kshs 200. Please confirm yes or no to proceed.</p>
+                        <p>We charge delivery at Kshs 200. Please click yes or no to proceed.</p>
                         <button class="btn btn-success" id="checkOut_yes">YES</button>
                         <button class="btn btn-danger" id="checkOut_no">NO</button>
                     </div>
@@ -135,7 +178,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
 
@@ -230,10 +273,15 @@
 
 <!-- jQuery, Boostrap JS, and Pooper JS links -->
 
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
 
 
 <!-- Local JS File -->
