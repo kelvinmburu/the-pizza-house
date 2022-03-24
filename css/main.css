@@ -373,7 +373,7 @@ table {
     width: 50vw;
     margin: 0 auto;
     margin-top: 2vw;
-    background-color: var(--primary);
+    background-color: crimson;
     display: none;
 }
 
