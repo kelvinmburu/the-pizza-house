@@ -1,4 +1,3 @@
-
 // Getting pizza order function
 
 
@@ -7,8 +6,6 @@ class pizzaOrder {
         this.pizzaSize = pizzaSize;
         this.crust = crust;
         this.toppingFlavor = toppingFlavor;
-
-        this.pizzaPrice = pizzaPrice;
     }
 }
 
@@ -18,6 +15,8 @@ class total {
         return pizzaSize + crust + toppingFlavor;
     }
 }
+
+
 
 $(document).ready(function () {
     $('#pizzaMenu').click(function () {
@@ -56,17 +55,17 @@ $(document).ready(function () {
             toppingsPrice = 350;
         }
 
-        var totalPrice = total(sizePrice, crustPrice, toppingsPrice);
+        var totalPrice = new total(sizePrice, crustPrice, toppingsPrice);
 
 
         $('#pizza_table').append(
             '<tr>' +
             '<td>' + pizzaSize + ' ' + sizePrice + '</td>' +
-            '<td>' + crustChoice + '' + crustPrice + '</td>' +
+            '<td>' + crustChoice + ' ' + crustPrice + '</td>' +
             '<td>' + toppingsChoice + ' ' + toppingsPrice + '</td>' +
             '<td>' + totalPrice + '</td>' +
             '</tr>'
-        )
+        );
 
         $('#add').hide();
         $('#add2').show();
@@ -76,7 +75,7 @@ $(document).ready(function () {
             pizzaSize = $('#pizzaSize :selected').text();
             crustChoice = $('#crust :selected').text();
             toppingsChoice = $('#toppingFlavor :selected').text();
-            grandtotal = totalPrice + totalPrice;
+            grandPrice = totalPrice + totalPrice;
             console.log(grandPrice);
             // This should alert grand priceToppingsSmall
 
@@ -104,13 +103,12 @@ $(document).ready(function () {
                 toppingsPrice = 350;
             }
 
-            var totalPrice = toal(sizePrice, crustPrice, toppingsPrice);
-
+            var totalPrice = new total(sizePrice, crustPrice, toppingsPrice);
 
             $('#pizza_table').append(
                 '<tr>' +
                 '<td>' + pizzaSize + ' ' + sizePrice + '</td>' +
-                '<td>' + crustChoice + '' + crustPrice + '</td>' +
+                '<td>' + crustChoice + ' ' + crustPrice + '</td>' +
                 '<td>' + toppingsChoice + ' ' + toppingsPrice + '</td>' +
                 '<td>' + totalPrice + '</td>' +
                 '</tr>'
@@ -127,17 +125,17 @@ $(document).ready(function () {
         });
         $('#checkOut_yes').click(function () {
             $('.grand_div').show();
-            let grandLocation = totalPrice + 200;
+            var grandLocation = totalPrice + 200;
             $('.modal .grand_div').prepend(
-                '<p>' + 'GRAND TOTAL' + grandLocation + '</p>'
+                '<p>' + 'GRAND TOTAL: ' + grandLocation + '</p>'
             );
             $('.total_div').hide();
             $('#final_btn').click(function () {
                 $('.grand_div').hide();
                 $('.final').show();
-                let location = $('#locale').val();
+                var location = $('#locale').val();
                 $('.final').append(
-                    '<p>' + 'Thanks for shopping with us. Your order will be delivered to' + ' ' + location + '</p>'
+                    '<p>' + 'Thank you for shopping with Pizza House. Your order will be delivered to' + ' ' + location + '</p>'
                 );
             });
         });
