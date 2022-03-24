@@ -70,7 +70,7 @@
         </div>
         <div class="container">
             <div class="pizza-infor r-flex">
-                <select class="form-select form-select-sm" id="size" aria-label=".form-select-sm example">
+                <select class="form-select form-select-sm" id="pizzaSize" aria-label=".form-select-sm example">
                     <option value="1">Small</option>
                     <option selected value="2">Medium</option>
                     <option value="3">Large</option>
@@ -80,15 +80,15 @@
                     <option selected value="2">Stuffed</option>
                     <option value="3">Gluten-free</option>
                 </select>
-                <select class="form-select form-select-sm" id="toppings" aria-label=".form-select-sm example">
+                <select class="form-select form-select-sm" id="toppingFlavor" aria-label=".form-select-sm example">
                     <option selected value="1">Chicken</option>
                     <option value="3">Beef</option>
                     <option value="3">Spicy-Hot</option>
                 </select>
             </div>
             <ul id="cart"></ul>
-            <div class="btn btn-success" class="add" id="add">ADD</div>
-            <div class="btn btn-success" class="add" id="add2">ADD</div>
+            <div class="btn btn-primary" id="add">ADD</div>
+            <div class="btn btn-primary" id="add2">ADD</div>
 
         </div>
     </form>
@@ -227,5 +227,16 @@
         </div>
     </div>
 </footer>
+
+<!-- jQuery, Boostrap JS, and Pooper JS links -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+<!-- Local JS File -->
+<script src="js/app.js"></script>
 
 </html>
