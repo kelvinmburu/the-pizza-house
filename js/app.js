@@ -47,16 +47,16 @@ function myPizzaOrder(pizzaSize, crust, toppingFlavor, pizzaPrice) {
 }
 
 
-function totalPrice () {
+function totalPrice() {
     return pizzaSize + crust + toppingFlavor;
 }
 
-$(document).ready(function() {
-    $('#pizzaMenu').click(function() {
+$(document).ready(function () {
+    $('#pizzaMenu').click(function () {
         $('.modal').modal('show');
     })
 
-    $('#add').click(function() {
+    $('#add').click(function () {
         $('.table').show();
         pizzaSize = $('#size :selected').text();
         crustChoice = $('#crust :selected').text();
@@ -64,27 +64,27 @@ $(document).ready(function() {
 
         let grandPrice = 0;
 
-        if(pizzaSize == 'small') {
+        if (pizzaSize == 'small') {
             sizePrice = 450;
-        }else if(pizzaSize == 'medium') {
+        } else if (pizzaSize == 'medium') {
             sizePrice = 650;
-        }else if(pizzaSize == 'large') {
+        } else if (pizzaSize == 'large') {
             sizePrice = 1800;
         }
 
-        if(crustChoice == 'Crispy') {
+        if (crustChoice == 'Crispy') {
             crustPrice = 150;
-        } else if(crustChoice == 'Stuffed') {
+        } else if (crustChoice == 'Stuffed') {
             crustPrice = 200;
-        }else if(crustChoice == 'Gluten-free') {
+        } else if (crustChoice == 'Gluten-free') {
             crustPrice = 250;
         }
 
-        if(toppingsChoice == 'Chicken') {
+        if (toppingsChoice == 'Chicken') {
             toppingsPrice = 150;
-        }else if(toppingsChoice == 'Beef'){
+        } else if (toppingsChoice == 'Beef') {
             toppingsPrice = 250;
-        }else if(toppingsChoice == 'Spicy-Hot') {
+        } else if (toppingsChoice == 'Spicy-Hot') {
             toppingsPrice = 350;
         }
 
@@ -105,7 +105,7 @@ $(document).ready(function() {
     $('#add2').show();
     $('.submit').show();
 
-    $('#add2').click(function(){
+    $('#add2').click(function () {
         pizzaSize = $('#size :selected').text();
         crustChoice = $('#crust :selected').text();
         toppingsChoice = $('#toppings :selected').text();
@@ -113,27 +113,27 @@ $(document).ready(function() {
         console.log(grandPrice);
         // This should alert grand priceToppingsSmall
 
-        if(pizzaSize == 'Small') {
+        if (pizzaSize == 'Small') {
             sizePrice = 450;
-        }else if(pizzaSize == 'medium') {
+        } else if (pizzaSize == 'medium') {
             sizePrice = 650;
-        }else if(pizzaSize == 'large') {
+        } else if (pizzaSize == 'large') {
             sizePrice = 1800;
         }
 
-        if(crustChoice == 'Crispy') {
+        if (crustChoice == 'Crispy') {
             crustPrice = 150;
-        } else if(crustChoice == 'Stuffed') {
+        } else if (crustChoice == 'Stuffed') {
             crustPrice = 200;
-        }else if(crustChoice == 'Gluten-free') {
+        } else if (crustChoice == 'Gluten-free') {
             crustPrice = 250;
         }
 
-        if(toppingsChoice == 'Chicken') {
+        if (toppingsChoice == 'Chicken') {
             toppingsPrice = 150;
-        }else if(toppingsChoice == 'Beef'){
+        } else if (toppingsChoice == 'Beef') {
             toppingsPrice = 250;
-        }else if(toppingsChoice == 'Spicy-Hot') {
+        } else if (toppingsChoice == 'Spicy-Hot') {
             toppingsPrice = 350;
         }
 
@@ -150,7 +150,7 @@ $(document).ready(function() {
         );
 
     });
-    $('.submit').click(function() {
+    $('.submit').click(function () {
         grandPrice = parseInt(grandPrice + totalPrice);
         console.log(grandPrice);
         $('#checkOut').modal('show');
@@ -158,14 +158,14 @@ $(document).ready(function() {
             '<p>' + 'TOTAL: ' + totalPrice + '</p>'
         );
     });
-    $('#checkOut_yes').click(function(){
+    $('#checkOut_yes').click(function () {
         $('.grand_div').show();
         let grandLocation = totalPrice + 200;
         $('.modal .grand_div').prepend(
             '<p>' + 'GRAND TOTAL' + grandLocation + '</p>'
         );
         $('.total_div').hide();
-        $('#final_btn').click(function(){
+        $('#final_btn').click(function () {
             $('.grand_div').hide();
             $('.final').show();
             let location = $('#locale').val();
@@ -176,50 +176,16 @@ $(document).ready(function() {
     });
 
     //Checkout
+    $('#checkOut_no').click(function () {
+        $('.total_div').hide();
+        $('.grand_div').hide();
+        $('.final').show();
 
-})
-
-// priceToppingsSmall = {
-//     "small": 400,
-//     "crispy": 100,
-//     "stuffed": 200,
-//     "glutenfree": 300,
-//     "chicken": 100,
-//     "beef": 100,
-//     "chevon": 100,
-//     "peppers": 100,
-//     "onions": 50,
-//     "olives": 150,
-//     "pineapples": 100,
-// }
-
-// priceToppingsLarge = {
-//     "large": 800,
-//     "crispy": 200,
-//     "stuffed": 300,
-//     "glutenfree": 400,
-//     "chicken": 200,
-//     "beef": 200,
-//     "chevon": 200,
-//     "peppers": 200,
-//     "onions": 150,
-//     "olives": 250,
-//     "pineapples": 200,
-//   }
-//   priceToppingsMedium = {
-//     "medium" :600,
-//     "crispy": 150,
-//     "stuffed": 250,
-//     "glutenfree": 350,
-//     "chicken": 150,
-//     "beef": 150,
-//     "chevon": 150,
-//     "peppers": 150,
-//     "onions": 100,
-//     "olives": 200,
-//     "pineapples": 150,
-//   }
+        $('.modal .final').append(
+            '<p>' + 'Hooray! Your order will be shipped soon.' + '</p>' +
+            '<p>' + 'GRAND TOTAL' + totalPrice + '</p>'
+        );
+    });
 
 
-
-
+});
