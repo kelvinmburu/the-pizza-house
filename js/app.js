@@ -164,7 +164,11 @@ $(document).ready(function() {
         $('.modal .grand_div').prepend(
             '<p>' + 'GRAND TOTAL' + grandLocation + '</p>'
         );
-        
+        $('.total_div').hide();
+        $('#final_btn').click(function(){
+            $('.grand_div').hide();
+            $('.final_btn').show();
+        })
     })
 
 })
