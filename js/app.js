@@ -25,18 +25,18 @@ $(document).ready(function () {
     })
 
     $('#add').click(function () {
-        $('.table').show();
+        $('table').show();
         pizzaSize = $('#pizzaSize :selected').text();
         crustChoice = $('#crust :selected').text();
         toppingsChoice = $('#toppingFlavor :selected').text();
 
-        let grandPrice = 0;
+        var grandPrice = 0;
 
-        if (pizzaSize == 'small') {
+        if (pizzaSize == 'Small') {
             sizePrice = 450;
-        } else if (pizzaSize == 'medium') {
+        } else if (pizzaSize == 'Medium') {
             sizePrice = 650;
-        } else if (pizzaSize == 'large') {
+        } else if (pizzaSize == 'Large') {
             sizePrice = 1800;
         }
 
