@@ -356,9 +356,8 @@ form {
 }
 
 form .logo-img {
-    width:160px !important;
+    width:145px !important;
     margin: 0 auto;
-    /* margin-top: 2vw; */
     height: auto;
 }
 
@@ -376,6 +375,47 @@ table {
     margin-top: 2vw;
     background-color: var(--primary);
     display: none;
+}
+
+tr {
+    height: 2vw;
+}
+
+table th,
+td {
+    padding-left: 4vw;
+}
+
+
+.submit {
+    display: none;
+    margin-top: 1vw;
+}
+
+.grand_div {
+    display: none;
+}
+
+.final {
+    display: none;
+}
+
+.final .fa-circle-check {
+    color: var(--secondary);
+    font-size: 2vw;
+}
+
+.text-body p {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.r-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 150px;
 }
 
 
