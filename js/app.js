@@ -167,9 +167,15 @@ $(document).ready(function() {
         $('.total_div').hide();
         $('#final_btn').click(function(){
             $('.grand_div').hide();
-            $('.final_btn').show();
-        })
-    })
+            $('.final').show();
+            let location = $('#locale').val();
+            $('.final').append(
+                '<p>' + 'Thanks for shopping with us. Your order will be delivered to' + ' ' + location + '</p>'
+            );
+        });
+    });
+
+    //Checkout
 
 })
 
