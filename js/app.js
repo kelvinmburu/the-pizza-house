@@ -37,9 +37,8 @@ function topFunction() {
 
 // Get address and Number of pizzas validation
 
-let pizzaOrder = [];
 
-function myPizzaOrder() {
+function myPizzaOrder(pizzaSize, crust, toppingFlavor, pizzaPrice) {
     this.pizzaSize = pizzaSize;
     this.crust = crust;
     this.toppingFlavor = toppingFlavor;
@@ -47,51 +46,107 @@ function myPizzaOrder() {
     this.pizzaPrice = pizzaPrice;
 }
 
-priceToppingsSmall = {
-    "small": 400,
-    "crispy": 100,
-    "stuffed": 200,
-    "glutenfree": 300,
-    "chicken": 100,
-    "beef": 100,
-    "chevon": 100,
-    "peppers": 100,
-    "onions": 50,
-    "olives": 150,
-    "pineapples": 100,
+
+function totalPrice () {
+    return pizzaSize + crust + toppingFlavor;
 }
 
-priceToppingsLarge = {
-    "large": 800,
-    "crispy": 200,
-    "stuffed": 300,
-    "glutenfree": 400,
-    "chicken": 200,
-    "beef": 200,
-    "chevon": 200,
-    "peppers": 200,
-    "onions": 150,
-    "olives": 250,
-    "pineapples": 200,
-  }
-  priceToppingsMedium = {
-    "medium" :600,
-    "crispy": 150,
-    "stuffed": 250,
-    "glutenfree": 350,
-    "chicken": 150,
-    "beef": 150,
-    "chevon": 150,
-    "peppers": 150,
-    "onions": 100,
-    "olives": 200,
-    "pineapples": 150,
-  }
+$(document).ready(function() {
+    $('#pizzaMenu').click(function() {
+        $('.modal').modal('show');
+    })
+
+    $('#add').click(function() {
+        $('.table').show();
+        pizzaSize = $('#size :selected').text();
+        crustChoice = $('#crust :selected').text();
+        toppingsChoice = $('#toppings :selected').text();
+
+        let grandPrice = 0;
+
+        if(pizzaSize == 'small') {
+            sizePrice = 450;
+        }else if(pizzaSize == 'medium') {
+            sizePrice = 650;
+        }else if(pizzaSize == 'large') {
+            sizePrice = 1800;
+        }
+
+        if(crustChoice == 'Crispy') {
+            crustPrice = 150;
+        } else if(crustChoice == 'Stuffed') {
+            crustPrice = 200;
+        }else if(crustChoice == 'Gluten-free') {
+            crustPrice = 250;
+        }
+
+        if(toppingsChoice == 'Chicken') {
+            toppingsPrice = 150;
+        }else if(toppingsChoice == 'Beef'){
+            toppingsPrice = 250;
+        }else if(toppingsChoice == 'Spicy-Hot') {
+            toppingsPrice = 350;
+        }
+
+        let totalPrice = toal(sizePrice, crustPrice, toppingsPrice);
 
 
-var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
+        $('#pizza_table').append(
+            '<tr>' +
+            '<td>' + pizzaSize + ' ' + sizePrice + '</td>' +
+            '<td>' + crustChoice + '' + crustPrice + '</td>' +
+            '<td>' + toppingsChoice + ' ' + toppingsPrice + '</td>' +
+            '<td>' + totalPrice + '</td>' +
+            '</tr>'
+        )
+    });
 
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
+    $('#add').hide();
+    $('#add2').show();
+    $('.submit')
 })
+
+// priceToppingsSmall = {
+//     "small": 400,
+//     "crispy": 100,
+//     "stuffed": 200,
+//     "glutenfree": 300,
+//     "chicken": 100,
+//     "beef": 100,
+//     "chevon": 100,
+//     "peppers": 100,
+//     "onions": 50,
+//     "olives": 150,
+//     "pineapples": 100,
+// }
+
+// priceToppingsLarge = {
+//     "large": 800,
+//     "crispy": 200,
+//     "stuffed": 300,
+//     "glutenfree": 400,
+//     "chicken": 200,
+//     "beef": 200,
+//     "chevon": 200,
+//     "peppers": 200,
+//     "onions": 150,
+//     "olives": 250,
+//     "pineapples": 200,
+//   }
+//   priceToppingsMedium = {
+//     "medium" :600,
+//     "crispy": 150,
+//     "stuffed": 250,
+//     "glutenfree": 350,
+//     "chicken": 150,
+//     "beef": 150,
+//     "chevon": 150,
+//     "peppers": 150,
+//     "onions": 100,
+//     "olives": 200,
+//     "pineapples": 150,
+//   }
+
+
+
+
