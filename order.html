@@ -62,13 +62,15 @@
 
 <h2 class="page-header">Make <span class="pizza-text">Your</span> Order</h2>
 
-<div class="container-fluid pizzaOrders c-flex">
+<div class="container pizzaOrders c-flex">
     <form action="" class="shadow radius c-flex">
         <div class="text-body text-center" style="margin: top 10px;">
             <p>Place Order</p>
         </div>
         <div class="main-container">
-            <img class=" logo-img rounded mx-auto d-block" src="/images/order-rbg.png" alt="pizza house logo" />
+            <div class="text-center">
+                <img class=" logo-img rounded" src="/images/order-rbg.png" alt="pizza house logo" />
+            </div>
         </div>
         <div class="container">
             <div class="pizza-infor r-flex">
@@ -89,21 +91,23 @@
                 </select>
             </div>
             <ul id="cart"></ul>
-            <div class="btn btn-primary" style="cursor:pointer" id="add">ADD ORDER</div>
-            <div class="btn btn-primary" id="add2">ADD</div>
+            <div class="col text-center">
+                <div class="btn btn-primary" style="cursor:pointer" id="add">ADD ORDER</div>
+                <div class="btn btn-primary" id="add2">ADD</div>
+            </div>
 
         </div>
     </form>
     <table id="pizza_table">
         <tr>
-            <th>SIZE</th>
+            <th>PIZZA SIZE</th>
             <th>CRUST</th>
             <th>TOPPINGS</th>
             <th>TOTAL PRICE</th>
         </tr>
         <tr></tr>
     </table>
-    <div class="btn btn-success submit">SUBMIT</div>
+    <div class="btn btn-success submit" style="cursor:pointer">CHECK OUT</div>
 
     <!-- New Modal -->
     <div class="modal fade" id="checkOut" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
@@ -130,7 +134,7 @@
                             <label for="">Delivery Location</label>
                             <input type="text" name="" id="locale" class="form-control" placeholder=""
                                 aria-describedby="helpId" />
-                            <button class="btn btn-success" id="final_btn">SUBMIT</button>
+                            <button class="btn btn-success btn-lg" id="final_btn">SUBMIT</button>
                         </div>
                     </div>
                     <div class="final">
