@@ -62,31 +62,35 @@
 
 <div class="container-fluid pizzaOrders c-flex">
     <form action="" class="shadow radius c-flex">
-        <p>Place Order</p>
-        <div class="container">
+        <div class="text-body text-center" style="margin: top 10px;">
+            <p>Place Order</p>
+        </div>
+        <div class="main-container">
             <img class=" logo-img rounded mx-auto d-block" src="/images/order-rbg.png" alt="pizza house logo" />
         </div>
+        <div class="container">
+            <div class="pizza-infor r-flex">
+                <select class="form-select form-select-sm" id="size" aria-label=".form-select-sm example">
+                    <option value="1">Small</option>
+                    <option selected value="2">Medium</option>
+                    <option value="3">Large</option>
+                </select>
+                <select class="form-select form-select-sm" id="crust" aria-label=".form-select-sm example">
+                    <option value="1">Crispy</option>
+                    <option selected value="2">Stuffed</option>
+                    <option value="3">Gluten-free</option>
+                </select>
+                <select class="form-select form-select-sm" id="toppings" aria-label=".form-select-sm example">
+                    <option selected value="1">Chicken</option>
+                    <option value="3">Beef</option>
+                    <option value="3">Spicy-Hot</option>
+                </select>
+            </div>
+            <ul id="cart"></ul>
+            <div class="btn btn-success" class="add" id="add">ADD</div>
+            <div class="btn btn-success" class="add" id="add2">ADD</div>
 
-        <div class="pizza-infor r-flex">
-            <select class="form-select form-select-sm" id="size" aria-label=".form-select-sm example">
-                <option value="1">Small</option>
-                <option selected value="2">Medium</option>
-                <option value="3">Large</option>
-            </select>
-            <select class="form-select form-select-sm" id="crust" aria-label=".form-select-sm example">
-                <option value="1">Crispy</option>
-                <option selected value="2">Stuffed</option>
-                <option value="3">Gluten-free</option>
-            </select>
-            <select class="form-select form-select-sm" id="toppings" aria-label=".form-select-sm example">
-                <option selected value="1">Chicken</option>
-                <option value="3">Beef</option>
-                <option value="3">Spicy-Hot</option>
-            </select>
         </div>
-        <ul id="cart"></ul>
-        <div class="btn btn-success" id="add">ADD</div>
-        <!-- <div class="btn btn-success" class="add" id="add2">ADD</div> -->
     </form>
     <table id="pizza_table">
         <tr>
