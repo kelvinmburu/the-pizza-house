@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- Font Awesome JS -->
-    <script src="https://kit.fontawesome.com/8783ab45cc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+
+    />
 
     <!-- Local CSS File -->
     <link rel="stylesheet" href="css/main.css">
@@ -103,48 +105,41 @@
     </table>
     <div class="btn btn-success submit">SUBMIT</div>
 
-<!-- sample modal -->
+    <!-- New Modal -->
+    <div class="modal fade" id="checkOut" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">THE PIZZA HOUSE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="javascript:window.location.reload()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="total_div">
+                        <p class="total"></p>
+                        <p>We charge delivery at Kshs 200. Please click YES to proceed to checkout.</p>
+                        <button class="btn btn-success" id="checkOut_yes">YES</button>
+                        <button class="btn btn-danger" id="checkOut_no">NO</button>
+                    </div>
 
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
-    Launch demo modal
-  </button> -->
-
-<!-- New Modal -->
-<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalScrollableTitle">THE PIZZA HOUSE</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="javascript:window.location.reload()">
-          </button>
-        </div>
-        <div class="modal-body">
-            <div class="total_div">
-                <p class="total"></p>
-                <p>We charge delivery at Kshs 200. Please click yes or no to proceed.</p>
-                <button class="btn btn-success" id="checkOut_yes">YES</button>
-                <button class="btn btn-danger" id="checkOut_no">NO</button>
-            </div>
-
-            <div class="grand_div">
-                <div class="form-group">
-                    <label for="">Delivery Location</label>
-                    <input type="text" name="" id="locale" class="form-control" placeholder=""
-                        aria-describedby="helpId" />
-                    <button class="btn btn-success" id="final_btn">SUBMIT</button>
+                    <div class="grand_div">
+                        <div class="form-group">
+                            <label for="">Delivery Location</label>
+                            <input type="text" name="" id="locale" class="form-control" placeholder=""
+                                aria-describedby="helpId" />
+                            <button class="btn btn-success" id="final_btn">SUBMIT</button>
+                        </div>
+                    </div>
+                    <div class="final">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
                 </div>
             </div>
-            <div class="final">
-                <i class="fa-solid fa-circle-check"></i>
-            </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">YES</button>
-          <button type="button" class="btn btn-primary">NO</button>
-        </div>
-      </div>
     </div>
-  </div>
 
     <!-- Modal -->
     <!-- <div class="modal fade" id="checkOut" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
