@@ -362,6 +362,22 @@ form .logo-img {
     height: auto;
 }
 
+form .pizza-infor option {
+    width: 4vw !important;
+}
+
+#add2 {
+    display: none;
+}
+
+table {
+    width: 50vw;
+    margin: 0 auto;
+    margin-top: 2vw;
+    background-color: var(--primary);
+    display: none;
+}
+
 
 
 /* End of order form styling */
