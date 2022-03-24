@@ -2,18 +2,21 @@
 
 
 class pizzaOrder {
-    constructor(pizzaSize, crust, toppingFlavor, pizzaPrice) {
-        this.pizzaSize = pizzaSize;
+    constructor(size, crust, toppingFlavor, totalPrice) {
+        this.size = size;
         this.crust = crust;
         this.toppingFlavor = toppingFlavor;
     }
 }
 
+// class total {
+//     constructor(size, crust, toppingFlavor) {
+//         return size + crust + toppingFlavor;
+//     }
+// }
 
-class total {
-    constructor(pizzaSize, crust, toppingFlavor) {
-        return pizzaSize + crust + toppingFlavor;
-    }
+function total (size, crust, toppingFlavor) {
+    return size + crust + toppingFlavor;
 }
 
 
@@ -25,7 +28,7 @@ $(document).ready(function () {
 
     $('#add').click(function () {
         $('table').show();
-        pizzaSize = $('#pizzaSize :selected').text();
+        pizzaSize = $('#size :selected').text();
         crustChoice = $('#crust :selected').text();
         toppingsChoice = $('#toppingFlavor :selected').text();
 
@@ -40,30 +43,30 @@ $(document).ready(function () {
         }
 
         if (crustChoice == 'Crispy') {
-            crustPrice = 150;
+            crustPrice = 550;
         } else if (crustChoice == 'Stuffed') {
-            crustPrice = 200;
+            crustPrice = 300;
         } else if (crustChoice == 'Gluten-free') {
-            crustPrice = 250;
+            crustPrice = 450;
         }
 
         if (toppingsChoice == 'Chicken') {
-            toppingsPrice = 150;
+            toppingsPrice = 280;
         } else if (toppingsChoice == 'Beef') {
-            toppingsPrice = 250;
-        } else if (toppingsChoice == 'Spicy-Hot') {
             toppingsPrice = 350;
+        } else if (toppingsChoice == 'Spicy-Hot') {
+            toppingsPrice = 450;
         }
 
-        var totalPrice = new total(sizePrice, crustPrice, toppingsPrice);
+        var totalPrice = total(sizePrice, crustPrice, toppingsPrice);
 
 
         $('#pizza_table').append(
             '<tr>' +
-            '<td>' + pizzaSize + ' ' + sizePrice + '</td>' +
-            '<td>' + crustChoice + ' ' + crustPrice + '</td>' +
-            '<td>' + toppingsChoice + ' ' + toppingsPrice + '</td>' +
-            '<td>' + totalPrice + '</td>' +
+                '<td>' + pizzaSize + ' ' + sizePrice + '</td>' +
+                '<td>' + crustChoice + ' ' + crustPrice + '</td>' +
+                '<td>' + toppingsChoice + ' ' + toppingsPrice + '</td>' +
+                '<td>' + totalPrice + '</td>' +
             '</tr>'
         );
 
@@ -72,18 +75,18 @@ $(document).ready(function () {
         $('.submit').show();
 
         $('#add2').click(function () {
-            pizzaSize = $('#pizzaSize :selected').text();
+            pizzaSize = $('#size :selected').text();
             crustChoice = $('#crust :selected').text();
             toppingsChoice = $('#toppingFlavor :selected').text();
             grandPrice = totalPrice + totalPrice;
             console.log(grandPrice);
-            // This should alert grand priceToppingsSmall
+            // This should alert grand price
 
             if (pizzaSize == 'Small') {
                 sizePrice = 450;
-            } else if (pizzaSize == 'medium') {
+            } else if (pizzaSize == 'Medium') {
                 sizePrice = 650;
-            } else if (pizzaSize == 'large') {
+            } else if (pizzaSize == 'Large') {
                 sizePrice = 1800;
             }
 
@@ -103,14 +106,14 @@ $(document).ready(function () {
                 toppingsPrice = 350;
             }
 
-            var totalPrice = new total(sizePrice, crustPrice, toppingsPrice);
+            var totalPrice = total(sizePrice, crustPrice, toppingsPrice);
 
             $('#pizza_table').append(
                 '<tr>' +
-                '<td>' + pizzaSize + ' ' + sizePrice + '</td>' +
-                '<td>' + crustChoice + ' ' + crustPrice + '</td>' +
-                '<td>' + toppingsChoice + ' ' + toppingsPrice + '</td>' +
-                '<td>' + totalPrice + '</td>' +
+                    '<td>' + pizzaSize + ' ' + sizePrice + '</td>' +
+                    '<td>' + crustChoice + ' ' + crustPrice + '</td>' +
+                    '<td>' + toppingsChoice + ' ' + toppingsPrice + '</td>' +
+                    '<td>' + totalPrice + '</td>' +
                 '</tr>'
             );
 
@@ -147,7 +150,7 @@ $(document).ready(function () {
             $('.final').show();
 
             $('.modal .final').append(
-                '<p>' + 'Hooray! Your order will be shipped soon.' + '</p>' +
+                '<p>' + 'Please try placing your order again.' + '</p>' +
                 '<p>' + 'GRAND TOTAL' + totalPrice + '</p>'
             );
         });
