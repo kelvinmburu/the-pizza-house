@@ -1,8 +1,8 @@
-### The Pizza House & Project Description
+### The Pizza House
 
 This is a website for The Pizza House. It includes form details for collecting user input, and making pizza orders. Additionally, it showcases the services offered by The Pizza House.
 
-#### Author Name & Author Contact Info
+### Author Name & Author Contact Info
 
 Kelvin Mburu Wanjiku
 [Follow me on LinkedIn](https://www.linkedin.com/in/kelvin-m-560a25135/).
