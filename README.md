@@ -12,17 +12,17 @@ For project contribution email me on:
 - [mburuhkelvin@gmail.com]
 - [kelvin.anjiku@student.moringaschool.com]
 
-#### BDD
+### BDD
 
 - This website uses jQuery and JavaScript libraries for its functionality.
 - The website collects user information and displays an alert message.
 - This website makes use of Bootstrap 4 and 5 libraries.
 
-#### Project Setup
+### Project Setup
 
 This webpage doesn't require any setup information. Please use the live link version to preview it.
 
-#### Technologies Used
+### Technologies Used
 
 This project uses a combination of the following languages:
 
@@ -31,6 +31,9 @@ This project uses a combination of the following languages:
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
-#### Live Link
+### Live Link
 
 [Click here to view the live demo](https://kelvinmburu.github.io/the-pizza-house/)
+
+### License
+[LICENSE](LICENSE)
