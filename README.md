@@ -2,6 +2,16 @@
 
 This is a website for The Pizza House. It includes form details for collecting user input, and making pizza orders. Additionally, it showcases the services offered by The Pizza House.
 
+### Project Run-Through
+A few details about this project:
+
+![GitHub Repo Size](https://img.shields.io/github/repo-size/kelvinmburu/the-pizza-house)
+![Lines of Code](https://img.shields.io/tokei/lines/github/kelvinmburu/the-pizza-house)
+![GitHub License](https://img.shields.io/github/license/kelvinmburu/the-pizza-house)
+![GitHub Top Language](https://img.shields.io/github/languages/top/kelvinmburu/the-pizza-house)
+![GitHub Language Count](https://img.shields.io/github/languages/count/kelvinmburu/the-pizza-house)
+![GitHub Commit Activity](https://img.shields.io/github/commit-activity/w/kelvinmburu/the-pizza-house)
+
 ### Author Name & Author Contact Info
 
 Kelvin Mburu Wanjiku
